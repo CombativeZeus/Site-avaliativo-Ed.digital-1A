@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéWorld - Landing Page Acessível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Menu Principal">
+            <div class="logo">PokéWorld</div>
+            <div class="accessibility-controls">
+                <button onclick="changeFontSize('increase')" aria-label="Aumentar fonte">A+</button>
+                <button onclick="changeFontSize('decrease')" aria-label="Diminuir fonte">A-</button>
+                <button onclick="toggleHighContrast()" aria-label="Alternar Alto Contraste">🌓</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="reveal">
+            <h1>Explore o Universo Pokémon</h1>
+            <p>Conheça as criaturas, habilidades e tipos que definem gerações.</p>
+        </section>
+
+        <section id="featured" class="reveal" aria-labelledby="carousel-title">
+            <h2 id="carousel-title">Destaques da Temporada</h2>
+            <div class="carousel-container">
+                <div id="carousel-track" class="carousel-track" role="region" aria-live="polite">
+                    </div>
+                <div class="carousel-nav">
+                    <button id="prevBtn" aria-label="Slide Anterior">❮</button>
+                    <button id="nextBtn" aria-label="Próximo Slide">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="pokedex" class="reveal">
+            <h2>Pokédex em Destaque</h2>
+            <div id="pokemon-grid" class="grid-container">
+                </div>
+        </section>
+
+        <section id="faq" class="reveal">
+            <h2>Dúvidas Frequentes</h2>
+            <div id="faq-accordion">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 PokéWorld. Desenvolvido com foco em acessibilidade.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
