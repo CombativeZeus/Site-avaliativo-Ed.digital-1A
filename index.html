@@ -3,46 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto com Imagens</title>
-    <link rel="stylesheet" href="Style.css">
+    <title>PokéWorld - Explore o Universo Pokémon</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1>Bem-vindo ao Meu Site</h1>
-    </header>
-
-    <section class="hero">
-        <img src="https://picsum.photos/1200/400" alt="Imagem de Destaque" class="hero-img">
-        <div class="hero-text">
-            <h2>Explora a Galeria</h2>
-        </div>
+    <section class="accessibility-bar" aria-label="Controles de Acessibilidade">
+        <button onclick="changeFontSize('increase')" aria-label="Aumentar fonte">A+</button>
+        <button onclick="changeFontSize('decrease')" aria-label="Diminuir fonte">A-</button>
+        <button onclick="toggleContrast()" aria-label="Alternar Alto Contraste">🌓 Alto Contraste</button>
     </section>
 
-    <main class="container">
-        <div class="gallery">
-            <div class="card">
-                <img src="https://picsum.photos/300/200?random=1" alt="Natureza">
-                <p>Imagem 1: Natureza</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/300/200?random=2" alt="Cidade">
-                <p>Imagem 2: Cidade</p>
-            </div>
-            <div class="card">
-                <img src="https://picsum.photos/300/200?random=3" alt="Tecnologia">
-                <p>Imagem 3: Tecnologia</p>
-            </div>
-        </div>
-        
-        <button id="btn-mudar">Trocar Imagens</button>
-    </main>
+    <header role="banner">
+        <nav aria-label="Menu Principal">
+            <div class="logo">PokéWorld</div>
+            <ul>
+                <li><a href="#galeria">Pokémon</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#faq">Dúvidas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script src="script.Js"></script>
-</body>
-</html>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    <main>
+        <section id="hero" class="reveal" aria-labelledby="hero-title">
+            <div class="carousel" id="pokemonCarousel" role="region" aria-roledescription="carousel">
